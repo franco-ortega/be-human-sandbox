@@ -158,8 +158,9 @@ function activate(context) {
 		// The code you place here will be executed every time your command is executed
 		vscode.commands.registerCommand('sandbox.goodbyeCheese', function () {
 		
-		// This code will execute repeatedly based on the timing of setInterval (runTime variable on line 168).
+		// This code will execute repeatedly based on the timing of setInterval (runTime variable on line 169).
 		// The "{ modal: true }" code is what creates the pop-up at the top of the window.
+		// The "more cheese" and "Cancel" buttons don't do anything.
 			setInterval(function() {
 				vscode.window.showInformationMessage('Hello Cheese\nfrom\nsandbox!', { modal: true }, 'more cheese');
 				vscode.window.showInformationMessage(`Goodbye Cheese\nfrom\nsandbox!`);
