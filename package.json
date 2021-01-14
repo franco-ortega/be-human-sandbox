@@ -1,0 +1,60 @@
+{
+  "name": "sandbox",
+  "displayName": "sandbox",
+  "description": "Play with VSCode extension maker.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:sandbox.trackTimeNoOption",
+    "onCommand:sandbox.trackTimeTwoOptions",
+    "onCommand:sandbox.goodbyeCheese",
+    "onCommand:sandbox.tryAgain",
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sandbox.trackTimeNoOption",
+        "category": "beHuman",
+        "title": "Time Tracker: No Options"
+      },
+      {
+        "command": "sandbox.trackTimeTwoOptions",
+        "category": "beHuman",
+        "title": "Time Tracker: Two Options"
+      },
+      {
+        "command": "sandbox.tryAgain",
+        "category": "Top-Only Prompt",
+        "title": "Try Again"
+      },
+      {
+        "command": "sandbox.goodbyeCheese",
+        "category": "Top and Bottom Prompt",
+        "title": "GoodBYE Cheese"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.52.0",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1"
+  }
+}
